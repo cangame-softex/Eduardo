@@ -81,18 +81,22 @@ body {
   margin-bottom: 8px;
   font-weight: 700;
   font-family:'Reboto', sans-serif;
+  margin-left: 30px;
   
 }
 .form input {
+  display: inline-block;
   width: 600px;
   padding: 8px;
   margin-bottom: 10px;
   margin-left: 30px;
+
   
 }
 
 
 .form button {
+  display: block;
   background-color: #024873;
   color: white;
   padding: 20px 55px;
@@ -103,6 +107,7 @@ body {
   width: 15%;
   box-shadow: 4px 4px 0px #626E73;
   transition: backgroud-color 0.3s;
+  margin-left: 30px;
 }
 
 .footer {

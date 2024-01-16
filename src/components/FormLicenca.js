@@ -8,7 +8,12 @@ import { FaRegPenToSquare } from "react-icons/fa6";
 import { FaRegAddressBook } from "react-icons/fa6";
 import { AiOutlineControl } from "react-icons/ai";
 
+
+
+
+
 function FormLicenca() {
+
   const {
     register,
     handleSubmit,
@@ -40,42 +45,48 @@ function FormLicenca() {
         <label>
           Nome:
           
-          <input {...register('nome', { required: true })} className='nome'/>
+          
+        </label>
+        <input {...register('nome', { required: true })} className='nome'/>
           
           {errors.nome && <span>Nome é obrigatório</span>}
-        </label>
 
         <label>
           E-mail:
-          <input
+          
+        </label>
+        <input
             {...register('email', {required: true,pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i, //Utiliza essa regex para testar se o email está dentro do padrão
             })}
           />
           {errors.email && (
             <span>Formato do e-mail incorreto. Verifique o e-mail</span>
           )}
-        </label>
 
         <label>
           CPF:
-          <input
+         </label>
+         <input
             {...register('cpf', {
               required: true,
               pattern: /^\d{3}\.\d{3}\.\d{3}-\d{2}$/i,
             })}
           />
           {errors.cpf && <span>CPF inválido. Utilize o formato XXX.XXX.XXX-XX</span>}
-        </label>
 
-        <label>
-          Qtd de licenças:
-          <input {...register('licencas', { required: true,
+        <label>Telefone do responsável:</label>
+          <input {...register('telefone', { required: true,
           pattern:  /^\d+$/})} />
-          {errors.licencas && <span>Quantidade de licenças inválida. Utilize apenas números</span>}
-        </label>
+          {errors.telefone && <span>Telefone inválido. Utilize apenas números</span>}
 
-        <button type="submit">Enviar</button>
+        
+
+
+        <button type="submit">Enviar</button>  
       </form>
+
+      
+      
     </div>
             <footer className="footer">
                 <p> Copyright 2023 - Softex - Cangame</p>
